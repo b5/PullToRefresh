@@ -79,7 +79,7 @@
     refreshLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, REFRESH_HEADER_HEIGHT)];
     refreshLabel.backgroundColor = [UIColor clearColor];
     refreshLabel.font = [UIFont boldSystemFontOfSize:12.0];
-    refreshLabel.textAlignment = UITextAlignmentCenter;
+    refreshLabel.textAlignment = NSCenterTextAlignment;
 
     refreshArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow.png"]];
     refreshArrow.frame = CGRectMake(floorf((REFRESH_HEADER_HEIGHT - 27) / 2),
@@ -174,15 +174,5 @@
     [self performSelector:@selector(stopLoading) withObject:nil afterDelay:2.0];
 }
 
-- (void)dealloc {
-    [refreshHeaderView release];
-    [refreshLabel release];
-    [refreshArrow release];
-    [refreshSpinner release];
-    [textPull release];
-    [textRelease release];
-    [textLoading release];
-    [super dealloc];
-}
 
 @end
